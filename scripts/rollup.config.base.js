@@ -7,7 +7,7 @@ import replace from 'rollup-plugin-replace';
 import typescript from 'rollup-plugin-typescript';
 
 export default {
-  input: 'src/diablo-output.ts',
+  input: 'src/index.ts',
   plugins: [
     alias({
       resolve: ['.ts']
@@ -35,12 +35,12 @@ export default {
   output: [
     {
       format: 'cjs',
-      file: 'diabl-output',
+      file: 'xterm-addon-search-bar',
       sourcemap: true
     },
     {
       format: 'es',
-      file: 'diabl-output',
+      file: 'xterm-addon-search-bar',
       sourcemap: true
     }
   ]

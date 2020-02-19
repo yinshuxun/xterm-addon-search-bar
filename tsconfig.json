@@ -10,6 +10,7 @@
     "preserveConstEnums": false,
     "sourceMap": true,
     "downlevelIteration": true,
+    "strictPropertyInitialization":false
   },
   "exclude": ["node_modules"]
 }

@@ -1,15 +1,18 @@
 {
-  "name": "diablo-output",
-  "version": "0.2.0",
-  "main": "dist/diablo-output.cjs.js",
-  "module": "dist/diablo-output.esm.js",
-  "unpkg": "dist/diablo-output.min.js",
+  "name": "xterm-addon-search-bar",
+  "version": "0.1.1",
+  "main": "dist/xterm-addon-search-bar.cjs.js",
+  "module": "dist/xterm-addon-search-bar.esm.js",
+  "unpkg": "dist/xterm-addon-search-bar.min.js",
   "keywords": [
     "rollup",
     "babel",
-    "starter"
+    "starter",
+    "template",
+    "cli"
   ],
   "author": "yinshuxun",
+  "url": "https://github.com/yinshuxun/xterm-addon-search-bar",
   "license": "MIT",
   "scripts": {
     "cz": "git-cz",
@@ -18,7 +21,7 @@
     "build": "yarn run clean && cross-env NODE_ENV=production rollup -c scripts/rollup.config.prod.js",
     "test": "npm run flow && jest",
     "flow": "flow check",
-    "serve": "serve -p 8002",
+    "serve": "serve -p 7000",
     "release": "standard-version"
   },
   "husky": {
@@ -40,6 +43,7 @@
   ],
   "dependencies": {
     "babel-runtime": "^6.26.0",
+    "rxjs-compat": "^6.5.4",
     "xterm": "^4.3.0",
     "xterm-addon-search": "^0.4.0"
   },
