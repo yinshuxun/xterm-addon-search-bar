@@ -20,10 +20,10 @@
     </style>
     <html>
       <head>
-        <link rel="stylesheet" href="/node_modules/xterm/css/xterm.css" />
-        <script src="/node_modules/xterm/lib/xterm.js"></script>
-        <script src="/node_modules/xterm-addon-search/lib/xterm-addon-search.js"></script>
-        <script src="/lib/xterm-addon-search-bar.js"></script>
+        <link rel="stylesheet" href="node_modules/xterm/css/xterm.css" />
+        <script src="node_modules/xterm/lib/xterm.js"></script>
+        <script src="node_modules/xterm-addon-search/lib/xterm-addon-search.js"></script>
+        <script src="lib/xterm-addon-search-bar.js"></script>
         <style></style>
       </head>
       <body>
@@ -34,7 +34,7 @@
           term.open(document.getElementById('terminal'));
           var searchAddon = new SearchAddon.SearchAddon();
           var searchbarAddon = new SearchBarAddon.SearchBarAddon({
-            searchAddon: searchAddon
+            searchAddon
           });
           term.loadAddon(searchAddon);
           term.loadAddon(searchbarAddon);
