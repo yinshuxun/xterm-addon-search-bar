@@ -2,13 +2,20 @@ import alias from 'rollup-plugin-alias';
 import eslint from 'rollup-plugin-eslint';
 import nodeResolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-// import babel from 'rollup-plugin-babel';
 import replace from 'rollup-plugin-replace';
-import typescript from 'rollup-plugin-typescript';
+import typescript from 'rollup-plugin-typescript2';
+import postcss from 'rollup-plugin-postcss';
+
+const isProductionEnv = process.env.NODE_ENV === 'production';
 
 export default {
   input: 'src/index.ts',
   plugins: [
+    postcss({
+      extract: false,
+      minimize: isProductionEnv,
+      extensions: ['.css']
+    }),
     alias({
       resolve: ['.ts']
     }),
@@ -16,20 +23,15 @@ export default {
     replace({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
     }),
-    commonjs({
-      // non-CommonJS modules will be ignored, but you can also
-      // specifically include/exclude files
-      include: 'node_modules/**'
-    }),
     eslint({
       include: ['src/**/*.js']
     }),
-    // babel({
-    //   runtimeHelpers: true,
-    //   exclude: 'node_modules/**' // only transpile our source code
-    // }),
     typescript({
-      exclude: 'node_modules/**'
+      exclude: 'node_modules/**',
+      declarationDir:'./typings'
+    }),
+    commonjs({
+      include: 'node_modules/**'
     })
   ],
   output: [

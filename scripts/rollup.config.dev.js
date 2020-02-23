@@ -1,29 +1,23 @@
 import baseConfig from './rollup.config.base';
 import serve from 'rollup-plugin-serve';
 
-import { name } from '../package.json';
+import { name, global } from '../package.json';
 
 export default {
   ...baseConfig,
   output: [
     {
-      file: `dist/${name}.js`,
+      file: `lib/${name}.js`,
       format: 'umd',
-      name,
+      name: global,
       sourcemap: true
     },
-    {
-      file: `dist/${name}.cjs.js`,
-      format: 'cjs',
-      name,
-      sourcemap: 'inline'
-    }
   ],
   plugins: [
     ...baseConfig.plugins,
     serve({
-      port: 8001,
-      contentBase: ['example']
+      port: 7000,
+      contentBase: ['.']
     })
   ]
 };

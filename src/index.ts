@@ -1,11 +1,12 @@
 import { ITerminalAddon, Terminal } from 'xterm';
 import { ISearchOptions, SearchAddon } from 'xterm-addon-search';
+import './index.css'
 
 export interface SearchBarOption extends ISearchOptions {
   searchAddon: SearchAddon;
 }
 
-const ADDON_MARKER_NAME = 'search-bar__addon';
+const ADDON_MARKER_NAME = 'xterm-search-bar__addon';
 
 export class SearchBarAddon implements ITerminalAddon {
   private readonly options: Partial<SearchBarOption>;
@@ -25,10 +26,6 @@ export class SearchBarAddon implements ITerminalAddon {
     this.terminal = terminal;
     if (!this.searchAddon) {
       console.error('Cannot use search bar addon until search addon has been loaded!');
-    } else {
-      /* eslint-disable-next-line  @typescript-eslint/no-require-imports, @typescript-eslint/no-var-requires */
-      const styleModule = require('./search-bar-addon.scss');
-      this.addNewStyle(styleModule.default);
     }
   }
 

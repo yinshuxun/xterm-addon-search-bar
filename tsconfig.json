@@ -3,14 +3,17 @@
     "strict": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "target": "es5",
-    "module": "commonjs",
+    "target": "esnext",
+    "module": "esnext",
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": false,
     "sourceMap": true,
     "downlevelIteration": true,
-    "strictPropertyInitialization":false
+    "strictPropertyInitialization": false,
+    "declaration": true,
+    "declarationDir": "./typings"
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "files": ["src/index.ts"]
 }
