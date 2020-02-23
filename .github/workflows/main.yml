@@ -9,16 +9,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: checkout
-      uses: actions/checkout@master 
-      
+      uses: actions/checkout@master
+
     - name: yarn install, build, and test
       run: |
         yarn
         yarn build
-        yarn test:unit
+        
+    - name: cp archive
+      run: |
+        mkdir pages/node_modules pages/lib
+        cp -a node_modules/xterm pages/node_modules
+        cp -a node_modules/xterm-addon-search  pages/node_modules
+        cp -a lib/ pages/lib
+   
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2.5.0
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.deploy_key }}
         PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: example
+        PUBLISH_DIR: pages

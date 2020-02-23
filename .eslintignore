@@ -1,5 +1,5 @@
 build/*.js
 dist/*.js
 temp/*.js
-examples/*.js
+pages/*.js
 rollup.config.*.js
