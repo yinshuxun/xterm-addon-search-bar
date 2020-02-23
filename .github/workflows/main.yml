@@ -13,11 +13,13 @@ jobs:
 
     - name: yarn install, build, and test
       run: |
+        
         yarn
         yarn build
-        
+
     - name: cp archive
       run: |
+        rm -rf pages/lib pages/node_modules
         mkdir pages/node_modules pages/lib
         cp -a node_modules/xterm pages/node_modules
         cp -a node_modules/xterm-addon-search  pages/node_modules
