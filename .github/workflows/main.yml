@@ -1,5 +1,5 @@
 
-name: Build & Deploy
+name: ci
 on:
   push:
     branches:
