@@ -1,9 +1,8 @@
 
 name: ci
 on:
-  push:
-    branches:
-      - master
+  master:
+    types: [published]
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
