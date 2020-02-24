@@ -1,7 +1,7 @@
 ## xterm-addon-search-bar
 
 [![Build Status](https://github.com/yinshuxun/xterm-addon-search-bar/workflows/ci/badge.svg?branch=master&event=push)](https://github.com/yinshuxun/xterm-addon-search-bar/actions)
-[![Build Status](https://github.com/yinshuxun/xterm-addon-search-bar/workflows/npm-publish/badge.svg?branch=master&event=push)](https://github.com/yinshuxun/xterm-addon-search-bar/actions)
+[![Build Status](https://github.com/yinshuxun/xterm-addon-search-bar/workflows/publish/badge.svg?branch=master&event=push)](https://github.com/yinshuxun/xterm-addon-search-bar/actions)
 [![NPM](https://img.shields.io/npm/v/xterm-addon-search-bar.svg)](https://www.npmjs.com/package/xterm-addon-search-bar)
 ![License](https://img.shields.io/npm/l/xterm-addon-search-bar.svg)
 
