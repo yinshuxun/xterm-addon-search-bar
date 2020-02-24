@@ -17,7 +17,8 @@ export default {
     ...baseConfig.plugins,
     serve({
       port: 7000,
-      contentBase: ['.']
+      contentBase: ['pages','.'],
+      verbose: true,
     })
   ]
 };

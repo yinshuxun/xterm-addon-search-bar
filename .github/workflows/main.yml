@@ -1,8 +1,12 @@
 
 name: ci
 on:
-  master:
-    types: [published]
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build-and-deploy:
