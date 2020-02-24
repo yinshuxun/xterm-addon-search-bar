@@ -38,7 +38,7 @@ pids
 *.code-workspace
 
 # Dependency directories
-node_modules
+/node_modules
 
 # Optional
 .npm
@@ -49,4 +49,3 @@ node_modules
 
 # Project specific stuff
 temp
-typings

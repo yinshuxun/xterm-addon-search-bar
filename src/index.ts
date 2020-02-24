@@ -1,6 +1,6 @@
 import { ITerminalAddon, Terminal } from 'xterm';
 import { ISearchOptions, SearchAddon } from 'xterm-addon-search';
-import './index.css'
+import './index.css';
 
 export interface SearchBarOption extends ISearchOptions {
   searchAddon: SearchAddon;
@@ -33,6 +33,11 @@ export class SearchBarAddon implements ITerminalAddon {
     this.hidden();
   }
 
+  /**
+   *  Show the bar in the term
+   * @returns empty
+   * @memberof SearchBarAddon  necessary search addon instance
+   */
   show() {
     if (!this.terminal || !this.terminal.element) {
       return;
@@ -80,13 +85,17 @@ export class SearchBarAddon implements ITerminalAddon {
     (this.searchBarElement.querySelector('input') as HTMLInputElement).select();
   }
 
+  /**
+   * You can manually call close, also can click the close button on the bar
+   * @memberof SearchBarAddon
+   */
   hidden() {
     if (this.searchBarElement && (this.terminal.element as HTMLElement).parentElement) {
       this.searchBarElement.style.visibility = 'hidden';
     }
   }
 
-  on(selector: string, event: string, cb: (e: any) => void) {
+  private on(selector: string, event: string, cb: (e: any) => void) {
     const parentElement = <HTMLElement>(this.terminal.element as HTMLElement).parentElement;
     parentElement.addEventListener(event, (e) => {
       let target = e.target;
@@ -107,6 +116,11 @@ export class SearchBarAddon implements ITerminalAddon {
     });
   }
 
+  /**
+   * You can customize your own style, and then add CSS string template after search bar init
+   * @param {string} newStyle
+   * @memberof SearchBarAddon
+   */
   addNewStyle(newStyle: string) {
     let styleElement = document.getElementById(ADDON_MARKER_NAME) as HTMLStyleElement;
 

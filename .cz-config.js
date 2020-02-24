@@ -41,9 +41,7 @@ module.exports = {
       name: '⏪  revert:   Revert to a commit'
     }
   ],
-
   scopes: [],
-
   allowCustomScopes: true,
   allowBreakingChanges: ['feat', 'fix']
 };
