@@ -1,17 +1,17 @@
 {
   "name": "xterm-addon-search-bar",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "global": "SearchBarAddon",
   "main": "lib/xterm-addon-search-bar.js",
   "module": "lib/xterm-addon-search-bar.esm.js",
   "unpkg": "lib/xterm-addon-search-bar.min.js",
   "types": "typings/index.d.ts",
   "keywords": [
-    "rollup",
-    "babel",
-    "starter",
-    "template",
-    "cli"
+    "xterm",
+    "xterm-addon",
+    "search-bar",
+    "xterm-search-addon",
+    "xterm-search-bar-addon"
   ],
   "author": "yinshuxun",
   "url": "https://github.com/yinshuxun/xterm-addon-search-bar",
