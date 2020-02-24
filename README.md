@@ -1,8 +1,8 @@
 ## xterm-addon-search-bar
 
-[![Build Status](https://github.com/yinshuxun/xterm-addon-search-bar/workflows/ci/badge.svg?branch=gh-pages&event=push)](https://github.com/yinshuxun/xterm-addon-search-bar/actions)
-[![NPM](https://img.shields.io/npm/v/angular-translate.svg)](https://www.npmjs.com/package/xterm-addon-search-bar)
-![License](https://img.shields.io/npm/l/angular-translate.svg)
+[![Build Status](https://github.com/yinshuxun/xterm-addon-search-bar/workflows/ci/badge.svg?branch=master&event=push)](https://github.com/yinshuxun/xterm-addon-search-bar/actions)
+[![NPM](https://img.shields.io/npm/v/xterm-addon-search-bar.svg)](https://www.npmjs.com/package/xterm-addon-search-bar)
+![License](https://img.shields.io/npm/l/xterm-addon-search-bar.svg)
 
 An addon for [xterm.js](https://github.com/xtermjs/xterm.js) that enables show search bar in terminal. This addon requires xterm.js & xterm-addon-search v4+.
 
