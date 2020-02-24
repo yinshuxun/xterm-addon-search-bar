@@ -26,7 +26,7 @@ const searchAddonBar = new SearchAddonBar({searchAddon});
 terminal.loadAddon(searchAddon);
 terminal.loadAddon(searchAddonBar);
 // Can be uesd in a action as click
-searchbarAddon.show();
+searchAddonBar.show();
 ```
 
 See the full [API](https://github.com/yinshuxun/xterm-addon-search-bar/typings/index.d.ts) for more advanced usage
