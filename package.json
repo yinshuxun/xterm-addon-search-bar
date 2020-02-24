@@ -1,17 +1,17 @@
 {
   "name": "xterm-addon-search-bar",
-  "version": "0.1.1",
+  "version": "0.1.7",
   "global": "SearchBarAddon",
   "main": "lib/xterm-addon-search-bar.js",
   "module": "lib/xterm-addon-search-bar.esm.js",
   "unpkg": "lib/xterm-addon-search-bar.min.js",
   "types": "typings/index.d.ts",
   "keywords": [
-    "rollup",
-    "babel",
-    "starter",
-    "template",
-    "cli"
+    "xterm",
+    "xterm-addon",
+    "search-bar",
+    "xterm-search-addon",
+    "xterm-search-bar-addon"
   ],
   "author": "yinshuxun",
   "url": "https://github.com/yinshuxun/xterm-addon-search-bar",
@@ -21,9 +21,7 @@
     "clean": "rimraf lib",
     "start": "yarn run clean && cross-env NODE_ENV=development rollup -w -c scripts/rollup.config.dev.js",
     "build": "yarn run clean && cross-env NODE_ENV=production rollup -c scripts/rollup.config.prod.js",
-    "test": "npm run flow && jest",
-    "flow": "flow check",
-    "serve": "serve -p 7000",
+    "test": "jest",
     "release": "standard-version"
   },
   "husky": {
@@ -32,43 +30,42 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
   "lint-staged": {
-    "src/**/*.js": [
+    "src/**/*.ts": [
       "prettier --write",
-      "eslint --fix",
       "git add"
     ]
   },
   "files": [
     "src",
-    "lib/*.js"
+    "lib",
+    "typings"
   ],
+  "peerDependencies": {
+    "xterm": "^4.4.0",
+    "xterm-addon-search": "^0.5.0"
+  },
   "dependencies": {
     "babel-runtime": "^6.26.0",
-    "rxjs-compat": "^6.5.4",
-    "xterm": "^4.3.0",
-    "xterm-addon-search": "^0.4.0"
+    "rxjs-compat": "^6.5.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.4",
     "@commitlint/config-conventional": "^8.3.4",
     "ansi_up": "^4.0.4",
     "babel-core": "^6.26.0",
-    "babel-eslint": "^8.1.2",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-flow": "^6.23.0",
     "babel-preset-stage-2": "^6.24.1",
     "commitizen": "^4.0.3",
     "commitlint-config-cz": "^0.12.1",
     "cross-env": "^6.0.3",
     "cz-customizable": "^5.2.0",
-    "eslint": "^4.14.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-flowtype": "^2.40.1",
-    "eslint-plugin-import": "^2.8.0",
-    "flow-bin": "^0.62.0",
     "husky": "^3.1.0",
     "jest": "^22.0.4",
     "lint-staged": "^6.0.0",
@@ -79,7 +76,6 @@
     "rollup-plugin-alias": "^1.4.0",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-commonjs": "^8.2.6",
-    "rollup-plugin-eslint": "^4.0.0",
     "rollup-plugin-filesize": "^1.5.0",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-postcss": "^2.0.6",
@@ -91,12 +87,7 @@
     "standard-version": "^4.3.0",
     "typescript": "^3.7.4",
     "uglify-es": "^3.3.4",
-    "xterm-addon-web-links": "^0.2.1",
-    "xterm-addon-webgl": "^0.4.1"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-customizable"
-    }
+    "xterm": "^4.4.0",
+    "xterm-addon-search": "^0.5.0"
   }
 }
