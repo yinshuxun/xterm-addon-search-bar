@@ -3,6 +3,7 @@ name: ci
 on:
   master:
     types: [published]
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
