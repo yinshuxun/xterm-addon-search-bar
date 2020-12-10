@@ -84,7 +84,7 @@
     "rollup-plugin-typescript2": "^0.26.0",
     "rollup-plugin-uglify": "^2.0.1",
     "serve": "^10.0.2",
-    "standard-version": "^4.3.0",
+    "standard-version": "^8.0.1",
     "typescript": "^3.7.4",
     "uglify-es": "^3.3.4",
     "xterm": "^4.4.0",
