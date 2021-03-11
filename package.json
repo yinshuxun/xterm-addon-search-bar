@@ -57,7 +57,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.4",
     "@commitlint/config-conventional": "^8.3.4",
-    "ansi_up": "^4.0.4",
+    "ansi_up": "^5.0.0",
     "babel-core": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
